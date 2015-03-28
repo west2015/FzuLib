@@ -368,6 +368,14 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int customNavigationLayout=0x7f01002e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int debugDraw=0x7f01009d;
         /**  Whether this spinner should mark child views as enabled/disabled when
              the spinner itself is enabled/disabled. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -554,6 +562,33 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int labelTextSize=0x7f010081;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>ltr</code></td><td>0</td><td></td></tr>
+<tr><td><code>rtl</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int layoutDirection=0x7f01009c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int layout_newLine=0x7f01009f;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int layout_weight=0x7f0100a0;
         /**  Drawable used as a background for selected list items. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -832,7 +867,16 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int pstsTextAlpha=0x7f010098;
+        public static int pstsTextAlpha=0x7f010099;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int pstsTextColorNoSelected=0x7f010098;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -853,7 +897,7 @@ containing a value of this type.
 <tr><td><code>italic</code></td><td>0x2</td><td></td></tr>
 </table>
          */
-        public static int pstsTextSelectedStyle=0x7f01009a;
+        public static int pstsTextSelectedStyle=0x7f01009b;
         /** <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -865,7 +909,7 @@ containing a value of this type.
 <tr><td><code>italic</code></td><td>0x2</td><td></td></tr>
 </table>
          */
-        public static int pstsTextStyle=0x7f010099;
+        public static int pstsTextStyle=0x7f01009a;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -1177,6 +1221,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 </table>
          */
         public static int type=0x7f01006e;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int weightDefault=0x7f01009e;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1687,43 +1739,44 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int psts_background_tab=0x7f020058;
     }
     public static final class id {
-        public static int action_bar=0x7f050024;
+        public static int action_bar=0x7f050026;
         public static int action_bar_activity_content=0x7f050015;
-        public static int action_bar_container=0x7f050023;
-        public static int action_bar_overlay_layout=0x7f050027;
-        public static int action_bar_root=0x7f050022;
-        public static int action_bar_subtitle=0x7f05002b;
-        public static int action_bar_title=0x7f05002a;
-        public static int action_context_bar=0x7f050025;
+        public static int action_bar_container=0x7f050025;
+        public static int action_bar_overlay_layout=0x7f050029;
+        public static int action_bar_root=0x7f050024;
+        public static int action_bar_subtitle=0x7f05002d;
+        public static int action_bar_title=0x7f05002c;
+        public static int action_context_bar=0x7f050027;
         public static int action_menu_divider=0x7f050016;
         public static int action_menu_presenter=0x7f050017;
-        public static int action_mode_close_button=0x7f05002c;
-        public static int action_settings=0x7f050045;
-        public static int activity_chooser_view_content=0x7f05002d;
+        public static int action_mode_close_button=0x7f05002e;
+        public static int action_settings=0x7f050047;
+        public static int activity_chooser_view_content=0x7f05002f;
         public static int always=0x7f05000b;
         public static int back=0x7f05001c;
         public static int beginning=0x7f050011;
         public static int bold=0x7f050020;
-        public static int checkbox=0x7f050035;
+        public static int checkbox=0x7f050037;
         public static int close=0x7f05001d;
         public static int collapseActionView=0x7f05000d;
-        public static int default_activity_button=0x7f050030;
+        public static int default_activity_button=0x7f050032;
         public static int dialog=0x7f05000e;
         public static int disableHome=0x7f050008;
         public static int drawer=0x7f05001b;
         public static int dropdown=0x7f05000f;
-        public static int edit_query=0x7f050038;
+        public static int edit_query=0x7f05003a;
         public static int end=0x7f050013;
-        public static int expand_activities_button=0x7f05002e;
-        public static int expanded_menu=0x7f050034;
+        public static int expand_activities_button=0x7f050030;
+        public static int expanded_menu=0x7f050036;
         public static int home=0x7f050014;
         public static int homeAsUp=0x7f050005;
-        public static int icon=0x7f050032;
+        public static int icon=0x7f050034;
         public static int ifRoom=0x7f05000a;
-        public static int image=0x7f05002f;
+        public static int image=0x7f050031;
         public static int italic=0x7f050021;
         public static int listMode=0x7f050001;
-        public static int list_item=0x7f050031;
+        public static int list_item=0x7f050033;
+        public static int ltr=0x7f050022;
         public static int menu=0x7f05001f;
         public static int middle=0x7f050012;
         public static int mini=0x7f05001a;
@@ -1733,28 +1786,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int plus=0x7f05001e;
         public static int progress_circular=0x7f050018;
         public static int progress_horizontal=0x7f050019;
-        public static int psts_tab_title=0x7f050044;
-        public static int radio=0x7f050037;
-        public static int search_badge=0x7f05003a;
-        public static int search_bar=0x7f050039;
-        public static int search_button=0x7f05003b;
-        public static int search_close_btn=0x7f050040;
-        public static int search_edit_frame=0x7f05003c;
-        public static int search_go_btn=0x7f050042;
-        public static int search_mag_icon=0x7f05003d;
-        public static int search_plate=0x7f05003e;
-        public static int search_src_text=0x7f05003f;
-        public static int search_voice_btn=0x7f050043;
-        public static int shortcut=0x7f050036;
+        public static int psts_tab_title=0x7f050046;
+        public static int radio=0x7f050039;
+        public static int rtl=0x7f050023;
+        public static int search_badge=0x7f05003c;
+        public static int search_bar=0x7f05003b;
+        public static int search_button=0x7f05003d;
+        public static int search_close_btn=0x7f050042;
+        public static int search_edit_frame=0x7f05003e;
+        public static int search_go_btn=0x7f050044;
+        public static int search_mag_icon=0x7f05003f;
+        public static int search_plate=0x7f050040;
+        public static int search_src_text=0x7f050041;
+        public static int search_voice_btn=0x7f050045;
+        public static int shortcut=0x7f050038;
         public static int showCustom=0x7f050007;
         public static int showHome=0x7f050004;
         public static int showTitle=0x7f050006;
-        public static int split_action_bar=0x7f050026;
-        public static int submit_area=0x7f050041;
+        public static int split_action_bar=0x7f050028;
+        public static int submit_area=0x7f050043;
         public static int tabMode=0x7f050002;
-        public static int title=0x7f050033;
-        public static int top_action_bar=0x7f050028;
-        public static int up=0x7f050029;
+        public static int title=0x7f050035;
+        public static int top_action_bar=0x7f05002a;
+        public static int up=0x7f05002b;
         public static int useLogo=0x7f050003;
         public static int withText=0x7f05000c;
     }
@@ -3143,6 +3197,136 @@ containing a value of this type.
           @attr name com.material:type
         */
         public static final int FloatingActionButton_type = 0;
+        /** Attributes that can be used with a FlowLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FlowLayout_android_gravity android:gravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_android_orientation android:orientation}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_debugDraw com.material:debugDraw}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_layoutDirection com.material:layoutDirection}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_weightDefault com.material:weightDefault}</code></td><td></td></tr>
+           </table>
+           @see #FlowLayout_android_gravity
+           @see #FlowLayout_android_orientation
+           @see #FlowLayout_debugDraw
+           @see #FlowLayout_layoutDirection
+           @see #FlowLayout_weightDefault
+         */
+        public static final int[] FlowLayout = {
+            0x010100af, 0x010100c4, 0x7f01009c, 0x7f01009d,
+            0x7f01009e
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#gravity}
+          attribute's value can be found in the {@link #FlowLayout} array.
+          @attr name android:gravity
+        */
+        public static final int FlowLayout_android_gravity = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#orientation}
+          attribute's value can be found in the {@link #FlowLayout} array.
+          @attr name android:orientation
+        */
+        public static final int FlowLayout_android_orientation = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.material.R.attr#debugDraw}
+          attribute's value can be found in the {@link #FlowLayout} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.material:debugDraw
+        */
+        public static final int FlowLayout_debugDraw = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.material.R.attr#layoutDirection}
+          attribute's value can be found in the {@link #FlowLayout} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>ltr</code></td><td>0</td><td></td></tr>
+<tr><td><code>rtl</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.material:layoutDirection
+        */
+        public static final int FlowLayout_layoutDirection = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.material.R.attr#weightDefault}
+          attribute's value can be found in the {@link #FlowLayout} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.material:weightDefault
+        */
+        public static final int FlowLayout_weightDefault = 4;
+        /** Attributes that can be used with a FlowLayout_LayoutParams.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FlowLayout_LayoutParams_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_LayoutParams_layout_newLine com.material:layout_newLine}</code></td><td></td></tr>
+           <tr><td><code>{@link #FlowLayout_LayoutParams_layout_weight com.material:layout_weight}</code></td><td></td></tr>
+           </table>
+           @see #FlowLayout_LayoutParams_android_layout_gravity
+           @see #FlowLayout_LayoutParams_layout_newLine
+           @see #FlowLayout_LayoutParams_layout_weight
+         */
+        public static final int[] FlowLayout_LayoutParams = {
+            0x010100b3, 0x7f01009f, 0x7f0100a0
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
+          attribute's value can be found in the {@link #FlowLayout_LayoutParams} array.
+          @attr name android:layout_gravity
+        */
+        public static final int FlowLayout_LayoutParams_android_layout_gravity = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.material.R.attr#layout_newLine}
+          attribute's value can be found in the {@link #FlowLayout_LayoutParams} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.material:layout_newLine
+        */
+        public static final int FlowLayout_LayoutParams_layout_newLine = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.material.R.attr#layout_weight}
+          attribute's value can be found in the {@link #FlowLayout_LayoutParams} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.material:layout_weight
+        */
+        public static final int FlowLayout_LayoutParams_layout_weight = 2;
         /** Attributes that can be used with a InputText.
            <p>Includes the following attributes:</p>
            <table>
@@ -3758,6 +3942,7 @@ containing a value of this type.
            <tr><td><code>{@link #PagerSlidingTabStrip_pstsTabPaddingLeftRight com.material:pstsTabPaddingLeftRight}</code></td><td></td></tr>
            <tr><td><code>{@link #PagerSlidingTabStrip_pstsTextAllCaps com.material:pstsTextAllCaps}</code></td><td></td></tr>
            <tr><td><code>{@link #PagerSlidingTabStrip_pstsTextAlpha com.material:pstsTextAlpha}</code></td><td></td></tr>
+           <tr><td><code>{@link #PagerSlidingTabStrip_pstsTextColorNoSelected com.material:pstsTextColorNoSelected}</code></td><td></td></tr>
            <tr><td><code>{@link #PagerSlidingTabStrip_pstsTextColorSelected com.material:pstsTextColorSelected}</code></td><td></td></tr>
            <tr><td><code>{@link #PagerSlidingTabStrip_pstsTextSelectedStyle com.material:pstsTextSelectedStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #PagerSlidingTabStrip_pstsTextStyle com.material:pstsTextStyle}</code></td><td></td></tr>
@@ -3776,6 +3961,7 @@ containing a value of this type.
            @see #PagerSlidingTabStrip_pstsTabPaddingLeftRight
            @see #PagerSlidingTabStrip_pstsTextAllCaps
            @see #PagerSlidingTabStrip_pstsTextAlpha
+           @see #PagerSlidingTabStrip_pstsTextColorNoSelected
            @see #PagerSlidingTabStrip_pstsTextColorSelected
            @see #PagerSlidingTabStrip_pstsTextSelectedStyle
            @see #PagerSlidingTabStrip_pstsTextStyle
@@ -3787,7 +3973,7 @@ containing a value of this type.
             0x7f01008e, 0x7f01008f, 0x7f010090, 0x7f010091,
             0x7f010092, 0x7f010093, 0x7f010094, 0x7f010095,
             0x7f010096, 0x7f010097, 0x7f010098, 0x7f010099,
-            0x7f01009a
+            0x7f01009a, 0x7f01009b
         };
         /**
           <p>This symbol is the offset where the {@link com.material.R.attr#pstsDividerColor}
@@ -3964,7 +4150,22 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.material:pstsTextAlpha
         */
-        public static final int PagerSlidingTabStrip_pstsTextAlpha = 14;
+        public static final int PagerSlidingTabStrip_pstsTextAlpha = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.material.R.attr#pstsTextColorNoSelected}
+          attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.material:pstsTextColorNoSelected
+        */
+        public static final int PagerSlidingTabStrip_pstsTextColorNoSelected = 14;
         /**
           <p>This symbol is the offset where the {@link com.material.R.attr#pstsTextColorSelected}
           attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
@@ -3997,7 +4198,7 @@ containing a value of this type.
 </table>
           @attr name com.material:pstsTextSelectedStyle
         */
-        public static final int PagerSlidingTabStrip_pstsTextSelectedStyle = 16;
+        public static final int PagerSlidingTabStrip_pstsTextSelectedStyle = 17;
         /**
           <p>This symbol is the offset where the {@link com.material.R.attr#pstsTextStyle}
           attribute's value can be found in the {@link #PagerSlidingTabStrip} array.
@@ -4015,7 +4216,7 @@ containing a value of this type.
 </table>
           @attr name com.material:pstsTextStyle
         */
-        public static final int PagerSlidingTabStrip_pstsTextStyle = 15;
+        public static final int PagerSlidingTabStrip_pstsTextStyle = 16;
         /**
           <p>This symbol is the offset where the {@link com.material.R.attr#pstsUnderlineColor}
           attribute's value can be found in the {@link #PagerSlidingTabStrip} array.

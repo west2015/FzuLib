@@ -74,6 +74,7 @@
         <attr name="pstsTextAllCaps" format="boolean" />
         <attr name="pstsPaddingMiddle" format="boolean" />
         <attr name="pstsTextColorSelected" format="color" />
+        <attr name="pstsTextColorNoSelected" format="color"/>
         <attr name="pstsTextAlpha" format="integer" />
         <attr name="pstsTextStyle">
             <flag name="normal" value="0x0" />
@@ -85,5 +86,20 @@
             <flag name="bold" value="0x1" />
             <flag name="italic" value="0x2" />
         </attr>
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="android:orientation" />
+        <attr name="layoutDirection" format="enum">
+            <enum name="ltr" value="0"/>
+            <enum name="rtl" value="1"/>
+        </attr>
+        <attr name="debugDraw" format="boolean"/>
+        <attr name="weightDefault" format="float" />
+        <attr name="android:gravity"/>
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams">
+        <attr name="layout_newLine" format="boolean"/>
+        <attr name="layout_weight" format="float"/>
+        <attr name="android:layout_gravity"/>
     </declare-styleable>
 </resources>

@@ -92,6 +92,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     private int tabTextSize = 14;
     private ColorStateList tabTextColor = null;
     private ColorStateList tabTextColorSelected = null;
+    private ColorStateList tabTextColorNoSelected = null;
     private int textAlpha = 150;
 
     private int paddingLeft = 0;
@@ -170,6 +171,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         tabTypefaceStyle = a.getInt(R.styleable.PagerSlidingTabStrip_pstsTextStyle, Typeface.BOLD);
         tabTypefaceSelectedStyle = a.getInt(R.styleable.PagerSlidingTabStrip_pstsTextSelectedStyle, Typeface.BOLD);
         tabTextColorSelected = a.getColorStateList(R.styleable.PagerSlidingTabStrip_pstsTextColorSelected);
+        tabTextColorNoSelected = a.getColorStateList(R.styleable.PagerSlidingTabStrip_pstsTextColorNoSelected);
         textAlpha = a.getInt(R.styleable.PagerSlidingTabStrip_pstsTextAlpha, textAlpha);
         a.recycle();
 
@@ -180,6 +182,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
         tabTextColorSelected = tabTextColorSelected == null ? getColorStateList(textPrimaryColor) : tabTextColorSelected;
 
+        tabTextColorNoSelected = tabTextColorNoSelected == null ? tabTextColor : tabTextColorNoSelected;
+        
         setMarginBottomTabContainer();
 
         rectPaint = new Paint();
@@ -479,7 +483,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             TextView title = (TextView) tab.findViewById(R.id.psts_tab_title);
             if (title != null) {
                 title.setTypeface(tabTypeface, tabTypefaceStyle);
-                title.setTextColor(tabTextColor);
+                title.setTextColor(tabTextColorNoSelected);
             }
         }
     }
@@ -528,7 +532,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         super.onDetachedFromWindow();
         if (pager != null) {
             if (adapterObserver.isAttached()) {
-                pager.getAdapter().unregisterDataSetObserver(adapterObserver);
+//                pager.getAdapter().unregisterDataSetObserver(adapterObserver);
                 adapterObserver.setAttached(false);
             }
         }
