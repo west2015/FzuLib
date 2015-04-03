@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <resources> 
     <declare-styleable name="RaisedButton"> 
+        <attr name="isCatchFocus" format="boolean"/>
         <attr name="startColor" format="reference|color"/>
         <attr name="endColor" format="reference|color"/>
     </declare-styleable>

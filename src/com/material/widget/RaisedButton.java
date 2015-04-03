@@ -30,6 +30,7 @@ public class RaisedButton extends Button {
     private int startColor	= getResources().getColor(R.color.black_disabled);
     private int endColor	= Color.TRANSPARENT;
     private float paintX, paintY, radius;
+    private boolean isCatchFocus = true;
 
     public RaisedButton(Context context) {
         super(context);
@@ -52,6 +53,7 @@ public class RaisedButton extends Button {
                 attrs, R.styleable.RaisedButton, defStyle, 0);
         startColor 	= a.getColor(R.styleable.RaisedButton_startColor, 	startColor);
         endColor 	= a.getColor(R.styleable.RaisedButton_endColor, 	endColor);
+        isCatchFocus = a.getBoolean(R.styleable.RaisedButton_isCatchFocus, true);
         a.recycle();
 
         this.backgroundPaint = new Paint();
@@ -74,7 +76,9 @@ public class RaisedButton extends Button {
             //Æô¶¯¶¯»­
             startMoveAnimator();
         }
-        return super.onTouchEvent(event);
+        this.getParent().requestDisallowInterceptTouchEvent(false);
+        super.onTouchEvent(event);
+        return isCatchFocus;
     }
     
     private void startMoveAnimator() {
