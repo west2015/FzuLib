@@ -28,7 +28,7 @@ public class RaisedButton extends Button {
 	
     private Paint backgroundPaint;
     private int startColor	= getResources().getColor(R.color.black_disabled);
-    private int endColor	= Color.TRANSPARENT;
+    private int endColor	= getResources().getColor(R.color.transparent);
     private float paintX, paintY, radius;
     private boolean isCatchFocus = true;
 
