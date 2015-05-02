@@ -51,8 +51,8 @@ public class RaisedButton extends Button {
         // Load attributes
         final TypedArray a = getContext().obtainStyledAttributes(
                 attrs, R.styleable.RaisedButton, defStyle, 0);
-        startColor 	= a.getColor(R.styleable.RaisedButton_startColor, 	startColor);
-        endColor 	= a.getColor(R.styleable.RaisedButton_endColor, 	endColor);
+        startColor 	= a.getColor(R.styleable.RaisedButton_startColor, 	getResources().getColor(R.color.black_disabled));
+        endColor 	= a.getColor(R.styleable.RaisedButton_endColor, 	getResources().getColor(R.color.transparent));
         isCatchFocus = a.getBoolean(R.styleable.RaisedButton_isCatchFocus, true);
         a.recycle();
 
@@ -120,7 +120,7 @@ public class RaisedButton extends Button {
         aRadius.setDuration(time);  
         //Background  
         @SuppressWarnings("unchecked")
-		ObjectAnimator aBackground = ObjectAnimator.ofObject(this, mBackgroundColorProperty, argbEvaluator, startColor, endColor);  
+		ObjectAnimator aBackground = ObjectAnimator.ofObject(this, mBackgroundColorProperty, new ArgbEvaluator(), startColor, endColor);  
         aBackground.setDuration(time);  
   
         //AnimatorSet  
@@ -130,37 +130,37 @@ public class RaisedButton extends Button {
         set.start();
     }
 
-    private void startAnimator() {
-
-        //计算半径变化区域
-        int start, end;
-
-        if (getHeight() < getWidth()) {
-            start = getHeight();
-            end = getWidth();
-        } else {
-            start = getWidth();
-            end = getHeight();
-        }
-
-        float startRadius = (start / 2 > paintY ? start - paintY : paintY) * 1.15f;
-        float endRadius = (end / 2 > paintX ? end - paintX : paintX) * 0.85f;
-
-        //新建动画
-        AnimatorSet set = new AnimatorSet();
-        //添加变化属性
-        set.playTogether(
-                //半径变化
-                ObjectAnimator.ofFloat(this, mRadiusProperty, startRadius, endRadius),
-                //颜色变化 黑色到透明
-                ObjectAnimator.ofObject(this, mBackgroundColorProperty, new ArgbEvaluator(), Color.GRAY, Color.TRANSPARENT)
-        );
-        // 设置时间
-        set.setDuration((long) (1200 / end * endRadius));
-        //先快后慢
-        set.setInterpolator(new DecelerateInterpolator());
-        set.start();
-    }
+//    private void startAnimator() {
+//
+//        //计算半径变化区域
+//        int start, end;
+//
+//        if (getHeight() < getWidth()) {
+//            start = getHeight();
+//            end = getWidth();
+//        } else {
+//            start = getWidth();
+//            end = getHeight();
+//        }
+//
+//        float startRadius = (start / 2 > paintY ? start - paintY : paintY) * 1.15f;
+//        float endRadius = (end / 2 > paintX ? end - paintX : paintX) * 0.85f;
+//
+//        //新建动画
+//        AnimatorSet set = new AnimatorSet();
+//        //添加变化属性
+//        set.playTogether(
+//                //半径变化
+//                ObjectAnimator.ofFloat(this, mRadiusProperty, startRadius, endRadius),
+//                //颜色变化 黑色到透明
+//                ObjectAnimator.ofObject(this, mBackgroundColorProperty, new ArgbEvaluator(), Color.GRAY, Color.TRANSPARENT)
+//        );
+//        // 设置时间
+//        set.setDuration((long) (1200 / end * endRadius));
+//        //先快后慢
+//        set.setInterpolator(new DecelerateInterpolator());
+//        set.start();
+//    }
 
     private Property<RaisedButton, Float> mPaintXProperty = new Property<RaisedButton, Float>(Float.class, "paintX") {  
         @Override  

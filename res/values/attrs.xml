@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<resources> 
+<resources>
+    
+    <declare-styleable name="ScrollableLayout">
+        <attr name="scrollable_maxScroll"          format="dimension" />
+        <attr name="scrollable_scrollerFlywheel"   format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_headerLayout" format="reference"/>
+        <attr name="el_contentLayout" format="reference" />
+        <attr name="el_duration" format="integer" />
+    </declare-styleable>
+
     <declare-styleable name="RaisedButton"> 
         <attr name="isCatchFocus" format="boolean"/>
         <attr name="startColor" format="reference|color"/>
         <attr name="endColor" format="reference|color"/>
     </declare-styleable>
-    
+
 	<declare-styleable name="CheckBox">
         <attr name="mColor" format="reference|color"/>
         <attr name="mChecked" format="boolean"/>
